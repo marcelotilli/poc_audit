@@ -1,0 +1,31 @@
+package projecttracker
+
+class TrackerFilterFilters {
+
+
+	private static final String START_TIME_ATTRIBUTE = 'Controller__START_TIME__'
+	private static final String REQUEST_NUMBER_ATTRIBUTE = 'Controller__REQUEST_NUMBER__'
+
+	def filters = {
+		all(controller:'*', action:'*') {
+			before = {
+			}
+			after = { Map model ->
+				if (!log.debugEnabled) return true
+
+				long start = request[START_TIME_ATTRIBUTE]
+				long end = System.currentTimeMillis()
+				long requestNumber = request[REQUEST_NUMBER_ATTRIBUTE]
+
+				def msg = "postHandle request #$requestNumber: end ${new Date()}, " +
+						"controller total time ${end - start}ms"
+				if (log.traceEnabled) {
+					log.trace msg + "; model: $model"
+				}
+				else {
+					log.debug msg
+				}
+			}
+		}
+	}
+}

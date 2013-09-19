@@ -1,0 +1,16 @@
+/**
+ * 
+ */
+package constantes;
+
+/**
+ * @author marcelo
+ *
+ */
+public enum EnunConversorMensages {
+	LOGIN
+	private String request;
+	private String mensagem;
+	
+
+}

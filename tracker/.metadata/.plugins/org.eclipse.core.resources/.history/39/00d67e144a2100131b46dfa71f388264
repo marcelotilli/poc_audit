@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package constantes;
+
+/**
+ * @author marcelo
+ *
+ */
+public enum EnunConversorMensages {
+
+}

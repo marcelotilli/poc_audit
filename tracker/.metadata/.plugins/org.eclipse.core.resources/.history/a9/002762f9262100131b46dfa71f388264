@@ -1,0 +1,7 @@
+package projecttracker
+
+class User {
+
+    static constraints = {
+    }
+}

@@ -1,0 +1,6 @@
+package projecttracker
+
+class UserController {
+
+    def index() { }
+}

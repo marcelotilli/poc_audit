@@ -1,0 +1,30 @@
+/**
+ * 
+ */
+package constantes;
+
+/**
+ * @author marcelo
+ *
+ */
+public enum EnunConversorMensages {
+	LOGIN("/grails/user/login.dispatch/","Usuário logou no sistema");
+	private String request;
+	private String mensagem;
+	private EnunConversorMensages(String request, String mensagem) {
+		this.request = request;
+		this.mensagem = mensagem;
+	}
+	public static String getMensagem(String request){
+	
+		EnunConversorMensages vetor[]=EnunConversorMensages.values();
+		for (int i = 0; i < vetor.length; i++) {
+			if (vetor[i].request.equals(request)) {
+				return vetor[i].mensagem;
+			}
+		}
+		return "Mensagem não encontrada";
+	}
+	
+
+}

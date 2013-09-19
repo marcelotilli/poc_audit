@@ -1,0 +1,9 @@
+package projecttracker
+
+class PessoaFisicaController {
+
+    def index() { }
+	def current(){
+		render "Pessoas Físicas"
+	}
+}

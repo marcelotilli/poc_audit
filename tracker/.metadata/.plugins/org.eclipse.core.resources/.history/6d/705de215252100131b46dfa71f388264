@@ -1,0 +1,10 @@
+package projecttracker
+
+class PessoaFisicaController {
+
+    def index() { }
+	def current(){
+		def projectName= "Pessoas Físicas"
+		[project:projectName]
+	}
+}
